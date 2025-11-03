@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD231 Course Home Page - Web Frontend Development course assignments and projects by Emmanuel Nduka Eze">
+    <meta name="author" content="Emmanuel Nduka Eze">
+    <title>WDD231 - Web Frontend Development | Emmanuel Nduka Eze</title>
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">EN</div>
+            <span class="site-name">Emmanuel Nduka Eze</span>
+        </div>
+        <button id="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="final/index.html">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="certificate-section">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button id="all" class="filter-btn active">All</button>
+                <button id="cse" class="filter-btn">CSE</button>
+                <button id="wdd" class="filter-btn">WDD</button>
+            </div>
+            <div id="courses" class="course-grid"></div>
+            <p class="credits-info">Total Credits Required: <span id="totalCredits">0</span></p>
+        </section>
+
+        <section class="about-section">
+            <h2>About Me</h2>
+            <p>Hello! I'm Emmanuel Nduka Eze from Lagos, Nigeria. I am passionate about web development and software engineering. Through this Web and Computer Programming certificate program, I am building strong foundations in both frontend and backend technologies. I enjoy creating responsive, user-friendly websites and solving complex programming challenges.</p>
+        </section>
+
+        <section class="resources-section">
+            <h2>Helpful Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://www.w3.org/" target="_blank">W3C Standards</a></li>
+                <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                <li><a href="https://web.dev/" target="_blank">Web.dev by Google</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/ndukanice" target="_blank" aria-label="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/feed/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+        <p>&copy;<span id="currentyear"></span> | Emmanuel Nduka Eze | Lagos, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
