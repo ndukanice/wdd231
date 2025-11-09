@@ -1,0 +1,79 @@
+[
+  {
+    "name": "GreenTech Solutions",
+    "address": "12 Eco Street, Victoria Island, Lagos",
+    "phone": "+234-802-123-4567",
+    "website": "https://greentech.ng",
+    "icon": "greentech.png",
+    "membershipLevel": 3,
+    "industry": "Renewable Energy",
+    "founded": 2015,
+    "contactPerson": "Adaobi Okeke"
+  },
+  {
+    "name": "NaijaFoods Ltd",
+    "address": "45 Market Road, Ikeja, Lagos",
+    "phone": "+234-803-987-6543",
+    "website": "https://naijafoods.com",
+    "icon": "naijafoods.png",
+    "membershipLevel": 2,
+    "industry": "Food Processing",
+    "founded": 2010,
+    "contactPerson": "Chinedu Eze"
+  },
+  {
+    "name": "SwiftLogistics",
+    "address": "88 Express Lane, Apapa, Lagos",
+    "phone": "+234-805-222-3344",
+    "website": "https://swiftlogistics.ng",
+    "icon": "swiftlogistics.png",
+    "membershipLevel": 1,
+    "industry": "Transportation & Logistics",
+    "founded": 2018,
+    "contactPerson": "Fatima Bello"
+  },
+  {
+    "name": "EduSmart Academy",
+    "address": "101 Learning Blvd, Yaba, Lagos",
+    "phone": "+234-809-555-6677",
+    "website": "https://edusmart.com.ng",
+    "icon": "edusmart.png",
+    "membershipLevel": 3,
+    "industry": "Education",
+    "founded": 2012,
+    "contactPerson": "Tunde Akinwale"
+  },
+  {
+    "name": "HealthPlus Pharmacy",
+    "address": "23 Wellness Avenue, Lekki, Lagos",
+    "phone": "+234-806-333-7788",
+    "website": "https://healthplus.ng",
+    "icon": "healthplus.png",
+    "membershipLevel": 2,
+    "industry": "Healthcare",
+    "founded": 2008,
+    "contactPerson": "Ngozi Umeh"
+  },
+  {
+    "name": "TechNova Systems",
+    "address": "77 Innovation Drive, Surulere, Lagos",
+    "phone": "+234-807-444-8899",
+    "website": "https://technova.com.ng",
+    "icon": "technova.png",
+    "membershipLevel": 3,
+    "industry": "Information Technology",
+    "founded": 2016,
+    "contactPerson": "Kelechi Nwosu"
+  },
+  {
+    "name": "UrbanStyle Interiors",
+    "address": "5 Design Street, Ikoyi, Lagos",
+    "phone": "+234-808-666-9900",
+    "website": "https://urbanstyle.ng",
+    "icon": "urbanstyle.png",
+    "membershipLevel": 2,
+    "industry": "Interior Design",
+    "founded": 2013,
+    "contactPerson": "Bola Adeyemi"
+  }
+]
