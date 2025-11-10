@@ -45,7 +45,7 @@ listViewBtn.addEventListener('click', () => {
 async function fetchMembers() {
     try {
         console.log('Fetching members...');
-        const response = await fetch('Data/members.json');  // Capital D is correct
+        const response = await fetch('data/members.json');  // lowercase
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -61,10 +61,6 @@ async function fetchMembers() {
 function displayMembers(members) {
     memberDirectory.innerHTML = '';
     
-    // Test to see what the current page location is
-    console.log('Current page location:', window.location.href);
-    console.log('Base URL:', window.location.origin);
-    
     members.forEach(member => {
         const memberCard = document.createElement('div');
         memberCard.classList.add('member-card');
@@ -72,12 +68,10 @@ function displayMembers(members) {
         
         const membershipLevelText = getMembershipLevelText(member.membershipLevel);
         
-        // Try multiple path variations
+        // Correct path - images folder is at same level as directory.html
         const imagePath = `images/${member.icon}`;
-        console.log(`Trying to load: ${imagePath}`);
-        console.log(`Full URL would be: ${window.location.origin}${window.location.pathname.replace('directory.html', '')}${imagePath}`);
         
-        // Create image element separately for better control
+        // Create image element
         const imgElement = document.createElement('img');
         imgElement.src = imagePath;
         imgElement.alt = `${member.name} company logo`;
@@ -86,13 +80,13 @@ function displayMembers(members) {
         imgElement.height = 200;
         
         imgElement.onerror = function() {
-            console.error(`Failed to load: ${imagePath}`);
-            console.error(`Tried full path: ${this.src}`);
+            console.error(`❌ FAILED to load: ${imagePath}`);
+            console.error(`Full attempted URL: ${this.src}`);
             this.src = `https://placehold.co/400x200/1e5a8e/ffffff?text=${encodeURIComponent(member.name)}`;
         };
         
         imgElement.onload = function() {
-            console.log(`✓ Successfully loaded: ${imagePath}`);
+            console.log(`✅ SUCCESS: Loaded ${imagePath}`);
         };
         
         memberCard.innerHTML = `
@@ -106,9 +100,7 @@ function displayMembers(members) {
             <p><strong>Founded:</strong> ${member.founded}</p>
         `;
         
-        // Insert image at the beginning
         memberCard.insertBefore(imgElement, memberCard.firstChild);
-        
         memberDirectory.appendChild(memberCard);
     });
     
