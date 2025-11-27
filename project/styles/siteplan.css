@@ -1,0 +1,275 @@
+/* CSS Variables using the selected color scheme */
+:root {
+    --primary-blue: #2C5F99;
+    --accent-gold: #F5A623;
+    --success-green: #4CAF50;
+    --background-white: #FFFFFF;
+    --text-dark: #333333;
+    --light-gray: #F8F9FA;
+    --border-color: #DDD;
+}
+
+/* Typography - Using selected fonts */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-white);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+section {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    border-bottom: 3px solid var(--accent-gold);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.site-title {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+code {
+    background-color: var(--light-gray);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: var(--primary-blue);
+}
+
+/* Scenarios */
+.scenario {
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-left: 4px solid var(--accent-gold);
+    border-radius: 4px;
+}
+
+.scenario h3 {
+    margin-top: 0;
+    color: var(--primary-blue);
+}
+
+/* Color Scheme */
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.color-card {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.color-card:hover {
+    transform: translateY(-5px);
+}
+
+.color-swatch {
+    width: 100%;
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.color-card h4 {
+    margin: 0.5rem 0;
+    color: var(--primary-blue);
+}
+
+.color-card p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* Typography */
+.typography-example {
+    display: grid;
+    gap: 2rem;
+}
+
+.font-card {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.heading-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-details {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.font-sample {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.font-sample h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+.font-sample h2 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.font-sample h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+/* Wireframes */
+.wireframe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.wireframe-card {
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.wireframe-card h3 {
+    text-align: center;
+    color: var(--primary-blue);
+}
+
+.wireframe-combined {
+    margin: 2rem 0;
+}
+
+.wireframe-image {
+    background-color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.wireframe-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.wireframe-description {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.wireframe-description h3 {
+    margin-top: 1.5rem;
+    color: var(--primary-blue);
+}
+
+.wireframe-description h3:first-child {
+    margin-top: 0;
+}
+
+/* Lists */
+ul, ol {
+    line-height: 1.8;
+}
+
+ul li, ol li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-blue);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    .color-palette {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
