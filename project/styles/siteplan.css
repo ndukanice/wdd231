@@ -125,6 +125,33 @@ code {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
+/* Individual color swatches */
+.color-swatch.primary-blue {
+    background-color: #2C5F99;
+}
+
+.color-swatch.accent-gold {
+    background-color: #F5A623;
+}
+
+.color-swatch.success-green {
+    background-color: #4CAF50;
+}
+
+.color-swatch.background-white {
+    background-color: #FFFFFF;
+    border: 1px solid #ddd;
+}
+
+.color-swatch.text-dark {
+    background-color: #333333;
+}
+
+.color-swatch.light-gray {
+    background-color: #F8F9FA;
+    border: 1px solid #ddd;
+}
+
 .color-card h4 {
     margin: 0.5rem 0;
     color: var(--primary-blue);
