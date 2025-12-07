@@ -241,7 +241,7 @@ main h2 {
 
 .close:hover,
 .close:focus {
-    color: var(--text-dark);
+    color: #333;
 }
 
 #modalBody h3 {
