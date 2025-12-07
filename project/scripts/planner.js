@@ -150,12 +150,12 @@ function setupEventListeners() {
     const proposeForm = document.getElementById('proposeForm');
     
     showFormBtn.addEventListener('click', () => {
-        proposeForm.style.display = 'grid';
+        proposeForm.classList.remove('hidden');
         showFormBtn.style.display = 'none';
     });
     
     cancelFormBtn.addEventListener('click', () => {
-        proposeForm.style.display = 'none';
+        proposeForm.classList.add('hidden');
         showFormBtn.style.display = 'inline-block';
         proposeForm.reset();
     });
