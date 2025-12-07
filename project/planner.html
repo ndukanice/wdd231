@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project Planner - Browse service project ideas and propose new projects for LDS youth">
+    <meta name="author" content="Emmanuel Nduka Eze">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Project Planner - LDS Youth Service Tracker">
+    <meta property="og:description" content="Browse and plan meaningful service projects for youth groups">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ndukanice.github.io/wdd231/project/planner.html">
+    
+    <title>Project Planner - LDS Youth Service Tracker</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤝</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/planner.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <span class="logo">🤝</span>
+                <h1>LDS Youth Service Tracker</h1>
+            </div>
+            <button id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planner.html" class="active" aria-current="page">Project Planner</a></li>
+                <li><a href="gallery.html">Impact & Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Service Project Planner</h2>
+        <p class="intro-text">Browse project ideas or propose your own service initiative!</p>
+
+        <!-- Propose Project Form -->
+        <section class="propose-section">
+            <h3>📝 Propose a New Project</h3>
+            <button id="showFormBtn" class="cta-button primary">Propose Your Project</button>
+            
+            <form id="proposeForm" class="propose-form" method="get" action="submission.html" style="display: none;">
+                <label for="projectTitle">
+                    Project Title *
+                    <input type="text" id="projectTitle" name="projectTitle" required>
+                </label>
+
+                <label for="projectCategory">
+                    Category *
+                    <select id="projectCategory" name="projectCategory" required>
+                        <option value="">Select a category</option>
+                        <option value="Hunger Relief">Hunger Relief</option>
+                        <option value="Environment">Environment</option>
+                        <option value="Elderly Care">Elderly Care</option>
+                        <option value="Education">Education</option>
+                        <option value="Community Support">Community Support</option>
+                        <option value="Health">Health</option>
+                        <option value="Children">Children</option>
+                        <option value="Animal Welfare">Animal Welfare</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+
+                <label for="projectDescription">
+                    Project Description *
+                    <textarea id="projectDescription" name="projectDescription" rows="4" required></textarea>
+                </label>
+
+                <label for="proposerName">
+                    Your Name *
+                    <input type="text" id="proposerName" name="proposerName" required>
+                </label>
+
+                <label for="proposerEmail">
+                    Your Email *
+                    <input type="email" id="proposerEmail" name="proposerEmail" required>
+                </label>
+
+                <label for="estimatedParticipants">
+                    Estimated Participants
+                    <input type="number" id="estimatedParticipants" name="estimatedParticipants" min="1">
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <div class="form-buttons">
+                    <button type="submit" class="cta-button primary">Submit Proposal</button>
+                    <button type="button" id="cancelFormBtn" class="cta-button secondary">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Filter Controls -->
+        <section class="filter-section">
+            <h3>🔍 Browse Project Ideas</h3>
+            
+            <div class="filter-controls">
+                <label for="categoryFilter">
+                    Filter by Category:
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="Hunger Relief">Hunger Relief</option>
+                        <option value="Environment">Environment</option>
+                        <option value="Elderly Care">Elderly Care</option>
+                        <option value="Education">Education</option>
+                        <option value="Community Support">Community Support</option>
+                        <option value="Health">Health</option>
+                        <option value="Children">Children</option>
+                        <option value="Animal Welfare">Animal Welfare</option>
+                        <option value="Community Beautification">Community Beautification</option>
+                    </select>
+                </label>
+
+                <label for="difficultyFilter">
+                    Filter by Difficulty:
+                    <select id="difficultyFilter">
+                        <option value="all">All Levels</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </label>
+
+                <button id="resetFilters" class="cta-button secondary">Reset Filters</button>
+            </div>
+
+            <p class="project-count">Showing <span id="projectCount">0</span> projects</p>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-section">
+            <div id="projectsGrid" class="projects-grid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Project Details -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody">
+                <!-- Project details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>LDS Youth Service Tracker</h3>
+                <p>Empowering youth through service and leadership</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="planner.html">Project Planner</a></li>
+                    <li><a href="gallery.html">Impact & Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:service@ldyouth.org">service@ldyouth.org</a></p>
+                <p><a href="attributions.html">Attributions</a> | <a href="#" id="videoLink">Video Demo</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Emmanuel Nduka Eze | WDD 231 | LDS Youth Service Tracker</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/planner.js" type="module"></script>
+</body>
+</html>

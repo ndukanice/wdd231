@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Impact & Gallery - View testimonials and statistics from LDS youth service projects">
+    <meta name="author" content="Emmanuel Nduka Eze">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Impact & Gallery - LDS Youth Service Tracker">
+    <meta property="og:description" content="Celebrate the impact of youth service through photos, testimonials, and statistics">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ndukanice.github.io/wdd231/project/gallery.html">
+    
+    <title>Impact & Gallery - LDS Youth Service Tracker</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤝</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <span class="logo">🤝</span>
+                <h1>LDS Youth Service Tracker</h1>
+            </div>
+            <button id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planner.html">Project Planner</a></li>
+                <li><a href="gallery.html" class="active" aria-current="page">Impact & Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Impact & Stories</h2>
+        <p class="intro-text">Celebrating the difference our youth are making in the community</p>
+
+        <!-- Statistics Dashboard -->
+        <section class="stats-dashboard">
+            <h3>📊 Impact Statistics</h3>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">⏰</div>
+                    <div class="dashboard-number">1,247</div>
+                    <div class="dashboard-label">Total Hours Served</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">📋</div>
+                    <div class="dashboard-number">45</div>
+                    <div class="dashboard-label">Projects Completed</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">👥</div>
+                    <div class="dashboard-number">128</div>
+                    <div class="dashboard-label">Youth Volunteers</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">❤️</div>
+                    <div class="dashboard-number">850+</div>
+                    <div class="dashboard-label">People Helped</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">🌍</div>
+                    <div class="dashboard-number">12</div>
+                    <div class="dashboard-label">Communities Served</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">📦</div>
+                    <div class="dashboard-number">2,500+</div>
+                    <div class="dashboard-label">Items Donated</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Gallery -->
+        <section class="gallery-section">
+            <h3>🖼️ Project Gallery</h3>
+            <p class="gallery-intro">Visual stories from our completed service projects</p>
+            <div id="galleryGrid" class="gallery-grid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <h3>💬 Youth Testimonials</h3>
+            <div id="testimonialsGrid" class="testimonials-grid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2>Want to Make a Difference?</h2>
+            <p>Join us in serving the community and creating lasting impact!</p>
+            <a href="planner.html" class="cta-button primary">Start Planning</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>LDS Youth Service Tracker</h3>
+                <p>Empowering youth through service and leadership</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="planner.html">Project Planner</a></li>
+                    <li><a href="gallery.html">Impact & Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:service@ldyouth.org">service@ldyouth.org</a></p>
+                <p><a href="attributions.html">Attributions</a> | <a href="#" id="videoLink">Video Demo</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Emmanuel Nduka Eze | WDD 231 | LDS Youth Service Tracker</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/gallery.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LDS Youth Service Tracker - Track and celebrate youth service projects in your ward or stake">
+    <meta name="author" content="Emmanuel Nduka Eze">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="LDS Youth Service Tracker - Home">
+    <meta property="og:description" content="Organize, track, and celebrate LDS youth service projects">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ndukanice.github.io/wdd231/project/index.html">
+    
+    <title>Home - LDS Youth Service Tracker</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤝</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <span class="logo">🤝</span>
+                <h1>LDS Youth Service Tracker</h1>
+            </div>
+            <button id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="planner.html">Project Planner</a></li>
+                <li><a href="gallery.html">Impact & Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Serving Together, Growing Together</h2>
+                <p class="scripture">"By love serve one another" - Galatians 5:13</p>
+                <p class="hero-description">Track your service hours, plan meaningful projects, and celebrate the impact of youth-led service initiatives in your community.</p>
+                <div class="hero-buttons">
+                    <a href="planner.html" class="cta-button primary">Plan a Project</a>
+                    <a href="gallery.html" class="cta-button secondary">View Impact</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Highlights Section -->
+        <section class="recent-highlights">
+            <h2>Recent Service Highlights</h2>
+            <div class="highlights-grid" id="highlightsGrid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Quick Stats Section -->
+        <section class="quick-stats">
+            <h2>Our Impact This Year</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">⏰</div>
+                    <div class="stat-number" data-target="1247">0</div>
+                    <div class="stat-label">Hours Served</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-number" data-target="45">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" data-target="128">0</div>
+                    <div class="stat-label">Youth Participated</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">❤️</div>
+                    <div class="stat-number" data-target="850">0</div>
+                    <div class="stat-label">People Helped</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <h2>Ready to Make a Difference?</h2>
+            <p>Join other youth in serving your community and tracking your impact.</p>
+            <a href="planner.html" class="cta-button primary">Get Started</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>LDS Youth Service Tracker</h3>
+                <p>Empowering youth through service and leadership</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="planner.html">Project Planner</a></li>
+                    <li><a href="gallery.html">Impact & Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:service@ldyouth.org">service@ldyouth.org</a></p>
+                <p><a href="attributions.html">Attributions</a> | <a href="#" id="videoLink">Video Demo</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Emmanuel Nduka Eze | WDD 231 | LDS Youth Service Tracker</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/home.js" type="module"></script>
+</body>
+</html>
