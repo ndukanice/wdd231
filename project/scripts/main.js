@@ -22,10 +22,3 @@ if (menuToggle && mainNav) {
         navUl.classList.toggle('show');
     });
 }
-
-// Video link (updated with actual YouTube URL)
-const videoLink = document.getElementById('videoLink');
-if (videoLink) {
-    videoLink.href = 'https://www.youtube.com/watch?v=QJKH6jUrOZw';
-    videoLink.target = '_blank';
-}
