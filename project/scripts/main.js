@@ -23,9 +23,9 @@ if (menuToggle && mainNav) {
     });
 }
 
-// Video link (will be updated with actual video URL)
+// Video link (updated with actual YouTube URL)
 const videoLink = document.getElementById('videoLink');
 if (videoLink) {
-    videoLink.href = 'https://youtu.be/YOUR_VIDEO_ID'; // Update with actual video
+    videoLink.href = 'https://www.youtube.com/watch?v=QJKH6jUrOZw';
     videoLink.target = '_blank';
 }
